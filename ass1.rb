@@ -1,5 +1,5 @@
 puts "enter the size of the grid"
-size = 5 #gets.chomp.to_i
+size = gets.chomp.to_i
 
 # Function to print the array
 def print_array(array,size)
@@ -14,11 +14,13 @@ end
   array = Array.new(size){Array.new(size,0)}
   a_rows = ['A','B','C','D','E','F','G','H','I','J']
   a_columns = ['0','1','2','3','4','5','6','7','8','9']
+=begin
   array[0][0]=10
   array[0][1]=10
   array[0][2]=10
   array[0][3]=10
   array[0][4]=10
+=end
   loop do
 
     puts "\nenter\n 1 to assign value \n 2 for expression\n 3 for exit"
@@ -66,6 +68,7 @@ end
           when "/"
             array[row0][column0]=array[row1][column1]/array[row2][column2]
         end
+        print_array(array,size)
 
 
 
