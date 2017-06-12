@@ -11,6 +11,9 @@ def print_array(array,size)
     print "\n"
   end
 end
+
+
+
   array = Array.new(size){Array.new(size,0)}
   a_rows = ['A','B','C','D','E','F','G','H','I','J']
   a_columns = ['0','1','2','3','4','5','6','7','8','9']
