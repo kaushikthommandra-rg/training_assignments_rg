@@ -1,6 +1,6 @@
 #start of Program
 puts "enter the size of the grid"
-$size = 5 # gets.chomp.to_i
+$size =  gets.chomp.to_i
 
 #Initializing Array
 $array = Array.new($size){Array.new($size,0)}
@@ -38,13 +38,13 @@ def set_dependency (lhs,rhs)
   $dependent_hash[cells[2].to_sym] = temp
 end
 def execute_string(lhs,rhs)
-  puts "im inside execute_string Function for #{lhs} = #{rhs}"
+#  puts "im inside execute_string Function for #{lhs} = #{rhs}"
   cells = rhs.split(" ")
   $array[lhs[1].to_i][$column_hash[lhs[0].to_sym]] = $array[cells[0][1].to_i][$column_hash[cells[0][0].to_sym]].send(cells[1],$array[cells[2][1].to_i][$column_hash[cells[2][0].to_sym]])
 
 end
 def resolve_dependency(input)
-  puts "im inside resolve_dependency Function for #{input}"
+#  puts "im inside resolve_dependency Function for #{input}"
   puts $dependent_hash[input]
   unless ($dependent_hash[input] == [] || !$dependent_hash[input])
       $dependent_hash[input].each do |key|
@@ -70,7 +70,7 @@ loop do
     resolve_dependency(inp[0].to_sym)
     print_array
   when 2 #to define an expression
-    puts "enter the expression"
+    puts "enter the expression in the form of a1 = a0 + a2"
     inp_str = gets.chomp.to_s.upcase
     inp = inp_str.split(" = ")
     lhs = inp[0]
