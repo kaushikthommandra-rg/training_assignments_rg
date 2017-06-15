@@ -1,0 +1,12 @@
+deleting an entry
+    delete from accidents where some condition;
+Grouping
+    select address from customers group by address;
+adding an atribute
+    alter table customers add column_name column_type;
+removing an attribute
+    alter table customers drop column_name
+deleting table
+    drop table accidents;
+Truncate
+    truncate topstates

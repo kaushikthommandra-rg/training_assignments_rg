@@ -1,0 +1,5 @@
+DBMS test Question 1
+
+
+
+select students.name , packages.salary from students inner join friends on (students.id = friends.id) inner join packages on (students.id = packages.id) where (select packages.salary where packages.id = friends.id) < (select packages.salary where packages.id = students.id);
