@@ -5368,3 +5368,2229 @@ Processing by EmployeesController#show as HTML
 Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:05:15 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/leads"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:06:33 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  Rendered leads/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 44ms (Views: 41.7ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:08:04 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  Rendered leads/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.9ms)
+
+
+Started GET "/leads/new" for 127.0.0.1 at 2017-06-20 16:08:08 +0530
+Processing by LeadsController#new as HTML
+  Rendering leads/new.html.erb within layouts/application
+  Rendered leads/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 21.7ms)
+
+
+Started POST "/leads" for 127.0.0.1 at 2017-06-20 16:08:20 +0530
+Processing by LeadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hHD5OMegielqekSekOIRnEASEZDE1eliV8y0xqFbAl6ih1QSkxgW/H2IcwKy8UrEYfhVhDzun7G0pjuF0S9RAQ==", "lead"=>{"lead_name"=>"Achaov"}, "commit"=>"Save Lead"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "leads" ("lead_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["lead_name", "Achaov"], ["created_at", "2017-06-20 10:38:20.907408"], ["updated_at", "2017-06-20 10:38:20.907408"]]
+  [1m[35m (230.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/leads/4
+Completed 302 Found in 243ms (ActiveRecord: 233.4ms)
+
+
+Started GET "/leads/4" for 127.0.0.1 at 2017-06-20 16:08:21 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UnknownFormat (LeadsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.1) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mLead Load (0.8ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/leads/4" for 127.0.0.1 at 2017-06-20 16:09:45 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  Rendered leads/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/leads/4" for 127.0.0.1 at 2017-06-20 16:23:26 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  Rendered leads/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `employee' for #<Lead:0x007f4b238808e0>
+Did you mean?  employees
+               employees=):
+     7:   <th>
+     8:     <td> Employee </td> <td> Skills </td>
+     9:   </th>
+    10:     <% @lead.employee.each do |employee| %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills %></td>
+  
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980342794940'
+Started GET "/leads/4" for 127.0.0.1 at 2017-06-20 16:23:42 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 4]]
+  Rendered leads/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:23:54 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:25:20 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for nil:NilClass):
+    10:     <% @lead.employees.each do |employee| %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <% @employee.skills.each do |skill| %>
+    14:                                         <%= skill.skill %>
+    15:                                         <% end %></td>
+    16:                                         </tr>
+  
+app/views/leads/show.html.erb:13:in `block in _app_views_leads_show_html_erb__736697696428452083_69980284816520'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980284816520'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:25:53 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 4]]
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 7]]
+  Rendered leads/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:26:34 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 4]]
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 7]]
+  Rendered leads/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:27:14 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 7]]
+  Rendered leads/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:27:38 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 7]]
+  Rendered leads/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:29:00 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  Rendered leads/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:30:10 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:35:17 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lead/1" for 127.0.0.1 at 2017-06-20 16:35:19 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/lead/1"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:35:29 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:35:42 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:35:43 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 7]]
+  Rendered leads/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 16:35:46 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 6]]
+  Rendered leads/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leads/3" for 127.0.0.1 at 2017-06-20 16:35:49 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 3]]
+  Rendered leads/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/leads/4" for 127.0.0.1 at 2017-06-20 16:35:52 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 4]]
+  Rendered leads/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:36:42 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:36:47 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2017-06-20 16:36:50 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 3]]
+  Rendered employees/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `lead_name' for nil:NilClass):
+    23: </p>
+    24: <p>
+    25:   <strong>Lead:</strong>
+    26:   <%= @employee.lead.lead_name %>
+    27: 
+    28: 
+    29: </p>
+  
+app/views/employees/show.html.erb:26:in `_app_views_employees_show_html_erb__3316841956412104906_69980153563900'
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:37:01 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2017-06-20 16:37:05 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 7]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/employees/3" for 127.0.0.1 at 2017-06-20 16:37:17 +0530
+Processing by EmployeesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fnwBaT4YOtzAeYkGqhuT/P2QLREdtFJ7jeYj2M7IAtRYi6xDaqClydeLvpqICMik3HppBeWPJKhujKybvrxRiw==", "id"=>"3"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "employees_skills" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 3]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 3]]
+  [1m[35m (112.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 120ms (ActiveRecord: 114.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:37:17 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/employees/4" for 127.0.0.1 at 2017-06-20 16:37:20 +0530
+Processing by EmployeesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qP5xwHBQq3Vhx1dJptfB9+wuXbvt3WaSjlUyfCqTMZKOCdzqJOg0YHY1YNWExJqvzcQZrxXmEEFtP70/WudizQ==", "id"=>"4"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "employees_skills" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 4]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 4]]
+  [1m[35m (131.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 136ms (ActiveRecord: 132.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:37:20 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/employees/5" for 127.0.0.1 at 2017-06-20 16:37:22 +0530
+Processing by EmployeesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lKyEHcELapFfEadSemu4jErKgWmb3J19D98BeXCsm2yyWyk3lbP1hEjjkM5YeOPUayDFfWPn667stY46ANjIMw==", "id"=>"5"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "employees_skills" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 5]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 5]]
+  [1m[35m (125.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 131ms (ActiveRecord: 125.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:37:23 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/6" for 127.0.0.1 at 2017-06-20 16:37:24 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 6]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `project' for nil:NilClass):
+    29: </p>
+    30: <p>
+    31:   <strong>Project:</strong>
+    32:   <%= @employee.project.project %>
+    33: 
+    34: 
+    35: </p>
+  
+app/views/employees/show.html.erb:32:in `_app_views_employees_show_html_erb__3316841956412104906_69980156231320'
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:37:30 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/employees/6" for 127.0.0.1 at 2017-06-20 16:37:33 +0530
+Processing by EmployeesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uyTHANg4prk6GSA3DS5w7Y2CGioiHhah4K7EgYUV4r6d02oqjIA5rC3rF6svPSu1rGhePtolYHIDxEvC9WGx4Q==", "id"=>"6"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "employees_skills" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 6]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 6]]
+  [1m[35m (129.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 136ms (ActiveRecord: 130.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:37:33 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2017-06-20 16:37:36 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 7]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/employees/7" for 127.0.0.1 at 2017-06-20 16:40:10 +0530
+Processing by EmployeesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kCxwt1FemDcmPXWEOMA4xNtQ+T3pFWYbOnRnCaS3W0C2292dBeYHIjHPQhga02Oc+rq9KREuEMjZHuhK1MMIHw==", "id"=>"7"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "employees_skills" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 7]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 7]]
+  [1m[35m (131.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 139ms (ActiveRecord: 131.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:40:11 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-20 16:40:11 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (10.2ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-06-20 16:40:48 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r1qZ0LPXfKzRUahoj5thmcUttOymfq/n4TFoh4vhixu4OchYGjaQNrWTmEMDUtulRCSMpNadtBooh/YvR0zv6A==", "employee"=>{"name"=>"Kaushik Thommandra", "age"=>"22", "designation"=>"FSD", "skill_ids"=>["", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "lead_id"=>"4", "project_id"=>"2"}, "commit"=>"Create Employee"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "age", "created_at", "updated_at", "designation", "lead_id", "project_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kaushik Thommandra"], ["age", 22], ["created_at", "2017-06-20 11:10:48.466115"], ["updated_at", "2017-06-20 11:10:48.466115"], ["designation", "FSD"], ["lead_id", 4], ["project_id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 5]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 6]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 7]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 8]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 10]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 8], ["skill_id", 11]]
+  [1m[35m (215.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees/8
+Completed 302 Found in 249ms (ActiveRecord: 217.3ms)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2017-06-20 16:40:48 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 8]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:41:25 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-20 16:41:26 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (10.6ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-06-20 16:42:01 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B2ga8JkrOAPJh2E9qgytn/SP1o/lIwI0hDFBRAK5NggQC0t4MMrUma1FURYmxRejdYbux5XAGclNh9/szhRS+w==", "employee"=>{"name"=>"phani", "age"=>"21", "designation"=>"FSD", "skill_ids"=>["", "1", "2", "3", "5", "6"], "lead_id"=>"2", "project_id"=>"4"}, "commit"=>"Create Employee"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2, 3, 5, 6)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "age", "created_at", "updated_at", "designation", "lead_id", "project_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "phani"], ["age", 21], ["created_at", "2017-06-20 11:12:01.307238"], ["updated_at", "2017-06-20 11:12:01.307238"], ["designation", "FSD"], ["lead_id", 2], ["project_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 9], ["skill_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 9], ["skill_id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 9], ["skill_id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 9], ["skill_id", 5]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 9], ["skill_id", 6]]
+  [1m[35m (203.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees/9
+Completed 302 Found in 222ms (ActiveRecord: 204.4ms)
+
+
+Started GET "/employees/9" for 127.0.0.1 at 2017-06-20 16:42:01 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees/9" for 127.0.0.1 at 2017-06-20 16:42:58 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:43:23 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:43:41 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:44:04 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:44:39 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:45:10 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:45:32 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-20 16:45:36 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (8.2ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-06-20 16:45:57 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EJX6MhPtlClG8vvAYXZcP9QyWAakQxveTvnUTbnSBC8H9qu6ugx4syIwy+vtv+YDVTtgTtSgACOHT0rldX9g3A==", "employee"=>{"name"=>"Arvind", "age"=>"21", "designation"=>"FSD", "skill_ids"=>["", "1", "2", "3", "5", "7", "8", "9", "10"], "lead_id"=>"1", "project_id"=>"1"}, "commit"=>"Create Employee"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2, 3, 5, 7, 8, 9, 10)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "age", "created_at", "updated_at", "designation", "lead_id", "project_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arvind"], ["age", 21], ["created_at", "2017-06-20 11:15:57.586129"], ["updated_at", "2017-06-20 11:15:57.586129"], ["designation", "FSD"], ["lead_id", 1], ["project_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 10], ["skill_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 10], ["skill_id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 10], ["skill_id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 10], ["skill_id", 5]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 10], ["skill_id", 7]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 10], ["skill_id", 8]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 10], ["skill_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 10], ["skill_id", 10]]
+  [1m[35m (185.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees/10
+Completed 302 Found in 219ms (ActiveRecord: 186.5ms)
+
+
+Started GET "/employees/10" for 127.0.0.1 at 2017-06-20 16:45:57 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:46:01 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-20 16:46:08 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (8.9ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-06-20 16:46:31 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PZTKYFw3tIkMKnuJlrdNfH3/X62s57jt5ZebgbIEmt8q95vo9dZYE2joS6IafvdA/PZn5dwEoxAsIQUpfqn+LA==", "employee"=>{"name"=>"Aniket", "age"=>"22", "designation"=>"FSD", "skill_ids"=>["", "1", "2", "3", "4", "5"], "lead_id"=>"2", "project_id"=>"4"}, "commit"=>"Create Employee"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2, 3, 4, 5)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "employees" ("name", "age", "created_at", "updated_at", "designation", "lead_id", "project_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aniket"], ["age", 22], ["created_at", "2017-06-20 11:16:31.020460"], ["updated_at", "2017-06-20 11:16:31.020460"], ["designation", "FSD"], ["lead_id", 2], ["project_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 11], ["skill_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 11], ["skill_id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 11], ["skill_id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 11], ["skill_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 11], ["skill_id", 5]]
+  [1m[35m (195.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees/11
+Completed 302 Found in 214ms (ActiveRecord: 197.1ms)
+
+
+Started GET "/employees/11" for 127.0.0.1 at 2017-06-20 16:46:31 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-20 16:46:33 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (11.8ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-06-20 16:47:09 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8/YLGKl/rhU2aXF4/adyMR5LkvZMdLE1voYiCXEJlwLklVqQAJ5Cj1KrQVNxbsgNn0KqvjyXqsh3MLyhvaTz8Q==", "employee"=>{"name"=>"Rohan", "age"=>"21", "designation"=>"FSD", "skill_ids"=>["", "1", "2", "4", "8", "10", "11"], "lead_id"=>"3", "project_id"=>"3"}, "commit"=>"Create Employee"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2, 4, 8, 10, 11)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "employees" ("name", "age", "created_at", "updated_at", "designation", "lead_id", "project_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rohan"], ["age", 21], ["created_at", "2017-06-20 11:17:09.158438"], ["updated_at", "2017-06-20 11:17:09.158438"], ["designation", "FSD"], ["lead_id", 3], ["project_id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 12], ["skill_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 12], ["skill_id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 12], ["skill_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 12], ["skill_id", 8]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 12], ["skill_id", 10]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 12], ["skill_id", 11]]
+  [1m[35m (197.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees/12
+Completed 302 Found in 218ms (ActiveRecord: 199.5ms)
+
+
+Started GET "/employees/12" for 127.0.0.1 at 2017-06-20 16:47:09 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 12]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:47:11 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 16:49:01 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 16:49:06 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:08 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do  @lead.employees.order(:employee.skills.count) |employee| %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980218779040'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980218779040'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:39 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.order(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_47117715976280'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_47117715976280'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:40 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.order(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980157122220'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980157122220'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:41 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.order(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980338773680'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980338773680'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:41 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.order(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980337096620'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980337096620'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:41 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.order(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980452516340'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980452516340'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:41 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.order(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980253152240'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980253152240'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:42 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.order(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980154419140'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980154419140'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:49:42 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.order(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980323344860'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980323344860'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:53:22 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  Rendered leads/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.each do |employee| @lead.employees.sort(:employee.skills.count)  %>
+    11: 
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `block in _app_views_leads_show_html_erb__736697696428452083_69980286124980'
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980286124980'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:54:02 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  Rendered leads/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/kaushik/kaushik/hrconsole/app/views/leads/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/leads/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:54:37 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  Rendered leads/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for :employee:Symbol):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.sort(:employee.skills.count)  %>
+    11:     <% @lead.employees.each do |employee| %>
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980335516780'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:54:55 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  Rendered leads/show.html.erb within layouts/application (150.6ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `skills' for #<#<Class:0x007f4b0c752d18>:0x007f4b0cbed2d8>
+Did you mean?  skills_url):
+     7:   <tr>
+     8:     <th> Employee </th> <th> Skills </th>
+     9:   </tr>
+    10:     <% @lead.employees.sort(skills.count)  %>
+    11:     <% @lead.employees.each do |employee| %>
+    12:   <tr>
+    13:     <td> <%= employee.name %> </td> <td> <%= employee.skills.count %> </td>
+  
+app/views/leads/show.html.erb:10:in `_app_views_leads_show_html_erb__736697696428452083_69980156555000'
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 16:55:43 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  Rendered leads/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveTeamLeadFromEmployees (20170620112846)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aemployees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "age" integer DEFAULT NULL, "team_lead" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "designation" varchar DEFAULT NULL, "lead_id" integer DEFAULT NULL, "project_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_employees_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_employees_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_employees_on_lead_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_employees_on_lead_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aemployees_on_project_id" ON "aemployees" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aemployees_on_lead_id" ON "aemployees" ("lead_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aemployees" ("id","name","age","team_lead","created_at","updated_at","designation","lead_id","project_id")
+                     SELECT "id","name","age","team_lead","created_at","updated_at","designation","lead_id","project_id" FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "age" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "designation" varchar DEFAULT NULL, "lead_id" integer DEFAULT NULL, "project_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aemployees_on_lead_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aemployees_on_lead_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aemployees_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aemployees_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_employees_on_lead_id" ON "employees" ("lead_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_employees_on_lead_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_employees_on_lead_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_employees_on_project_id" ON "employees" ("project_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("id","name","age","created_at","updated_at","designation","lead_id","project_id")
+                     SELECT "id","name","age","created_at","updated_at","designation","lead_id","project_id" FROM "aemployees"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aemployees"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170620112846"]]
+  [1m[35m (88.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_employees_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_employees_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_employees_on_lead_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_employees_on_lead_id' AND type='index'
+[0m
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 17:01:24 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  Rendered leads/show.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 61ms (Views: 48.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/leads/3" for 127.0.0.1 at 2017-06-20 17:01:27 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 3], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 12]]
+  Rendered leads/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/leads/4" for 127.0.0.1 at 2017-06-20 17:01:31 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLead Load (0.5ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 4], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 8]]
+  Rendered leads/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 17:27:22 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  Rendered leads/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 17:27:24 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  Rendered leads/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/leads/3" for 127.0.0.1 at 2017-06-20 17:27:27 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 3], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 12]]
+  Rendered leads/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 17:27:30 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  Rendered leads/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 17:27:43 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-20 17:27:44 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (17.9ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-06-20 17:28:04 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qvZ48JTH/VfRxfMaAbUf7jNPylt2RS0pk1fWX6K9j7e9lSl4PSYRzbUHwzGNfKXSskbyEwamNtRa4Uj3bhDrRA==", "employee"=>{"name"=>"visnu", "age"=>"22", "designation"=>"FSD2", "skill_ids"=>["", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "lead_id"=>"2", "project_id"=>"4"}, "commit"=>"Create Employee"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "employees" ("name", "age", "created_at", "updated_at", "designation", "lead_id", "project_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "visnu"], ["age", 22], ["created_at", "2017-06-20 11:58:04.647362"], ["updated_at", "2017-06-20 11:58:04.647362"], ["designation", "FSD2"], ["lead_id", 2], ["project_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 5]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 6]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 7]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 8]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 9]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 10]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 13], ["skill_id", 11]]
+  [1m[35m (194.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees/13
+Completed 302 Found in 233ms (ActiveRecord: 200.9ms)
+
+
+Started GET "/employees/13" for 127.0.0.1 at 2017-06-20 17:28:04 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 17:28:13 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 17:28:14 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/leads/" for 127.0.0.1 at 2017-06-20 17:30:34 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.7ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 17:30:36 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  Rendered leads/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 17:30:40 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[36mLead Load (0.7ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[36mLead Load (0.5ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ? LIMIT ?[0m  [["employee_id", 9], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY skills_count DESC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY skills DESC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ? OFFSET ?[0m  [["lead_id", 2], ["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ? LIMIT ?[0m  [["employee_id", 9], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY skills_count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY skills LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY skills_count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ? LIMIT ?[0m  [["employee_id", 9], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY skills LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY skills_count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY count(skills) LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY count(*) LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.5ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LEFT OUTER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" LEFT OUTER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LEFT OUTER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" LEFT OUTER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LEFT OUTER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" LEFT OUTER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY COUNT(employee.skills.count) LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LEFT OUTER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" LEFT OUTER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY COUNT(skills.id) LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LEFT OUTER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" LEFT OUTER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY COUNT(skills.count) LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LEFT OUTER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" LEFT OUTER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY COUNT(skills) LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LEFT OUTER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" LEFT OUTER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY "employees"."id" ORDER BY COUNT(skills.id) LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" INNER JOIN "employees" ON "employees"."lead_id" = "leads"."id" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" INNER JOIN "employees" ON "employees"."lead_id" = "leads"."id" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mLead Load (0.9ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" INNER JOIN "employees" ON "employees"."lead_id" = "leads"."id" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" ORDER BY "leads"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLead Load (0.5ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees.id LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees.id ORDER BY skills_count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees.id LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees.id ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees.id ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ? LIMIT ?[0m  [["employee_id", 9], ["LIMIT", 11]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees.id ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees.id ORDER BY skills.count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees.id ORDER BY employees_count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employee_skills LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employee_skills.employee.id LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? GROUP BY employees_skills.employee.id LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ? LIMIT ?[0m  [["employee_id", 8], ["LIMIT", 11]]
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" INNER JOIN "employees_skills" ON "employees_skills"."employee_id" = "employees"."id" INNER JOIN "skills" ON "skills"."id" = "employees_skills"."skill_id" ORDER BY "employees"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 18:28:34 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 19:39:46 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 655ms (Views: 632.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 19:39:51 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 188ms (Views: 71.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2017-06-20 19:39:56 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 8]]
+  [1m[36mLead Load (0.3ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (469.7ms)
+Completed 200 OK in 524ms (Views: 490.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 19:46:12 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 19:46:21 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 19:49:04 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 19:49:05 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 176ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 19:51:07 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 19:51:41 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 19:53:08 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 19:53:50 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 19:53:55 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 20:37:18 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 20:38:33 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 20:38:55 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 20:40:25 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 20:40:26 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 20:40:36 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 20:40:39 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 20:40:43 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  Rendered leads/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 38ms (Views: 23.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 20:40:48 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/leads/3" for 127.0.0.1 at 2017-06-20 20:40:52 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 12]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 12]]
+  Rendered leads/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leads/4" for 127.0.0.1 at 2017-06-20 20:40:55 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLead Load (0.6ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 8]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 8]]
+  Rendered leads/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 36ms (Views: 30.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 20:41:25 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 20:41:27 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 20:41:38 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  Rendered leads/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 20:41:50 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 20:42:18 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 20:42:20 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-20 20:42:24 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  Rendered leads/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-20 20:42:27 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (417.5ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (418.9ms)
+Completed 200 OK in 442ms (Views: 432.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-20 20:43:04 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 20:43:43 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2017-06-20 20:43:47 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 8]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-20 20:44:00 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-20 20:44:18 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 20:44:21 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-20 20:45:42 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-21 10:08:21 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 530ms (Views: 503.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-21 10:14:32 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (88.9ms)
+Completed 200 OK in 163ms (Views: 111.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-21 10:14:34 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (360.8ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (394.8ms)
+Completed 200 OK in 454ms (Views: 417.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-21 17:19:42 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 486ms (Views: 478.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leads" for 127.0.0.1 at 2017-06-21 17:19:45 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 321ms (Views: 35.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leads/1" for 127.0.0.1 at 2017-06-21 17:19:47 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 10]]
+  Rendered leads/show.html.erb within layouts/application (222.0ms)
+Completed 200 OK in 243ms (Views: 235.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-21 17:19:51 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mLead Load (0.8ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mLead Load (1.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ? LIMIT ?[0m  [["employee_id", 9], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY "employees"."id" ASC LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY id LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY id desc LIMIT ?[0m  [["lead_id", 1], ["LIMIT", 11]]
+  [1m[36mLead Load (0.6ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY id desc LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY id LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY skills.count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY skills.count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY skills LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY .skills LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? ORDER BY .skills.count LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+Started GET "/employees/new" for 127.0.0.1 at 2017-06-21 18:06:59 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (125.8ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (136.7ms)
+Completed 200 OK in 171ms (Views: 153.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-06-21 18:07:26 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ni2lQBFaLE199n17cGrKwCvPJfU58z3c+QkCJfu/Od82QSdHd8K1EXyz+1PtuepmObruV0ILgREWtS6ONhN5dA==", "employee"=>{"name"=>"ABCD", "age"=>"25", "designation"=>"FSDA", "skill_ids"=>["", "1", "2", "3", "4", "5", "6"], "lead_id"=>"2", "project_id"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2, 3, 4, 5, 6)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."project" ASC[0m
+  Rendered employees/_form.html.erb (11.8ms) [cache miss]
+  Rendered employees/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 58ms (Views: 39.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-06-21 18:07:30 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8IetzGzTKyhnjL0goCL2yy+aLlVEcDkW6id/W0bZA7lQl8At27wWNDsN9G40I3AynZs6ne/tJ2F4XPlAGJ/WYA==", "employee"=>{"name"=>"ABCD", "age"=>"25", "designation"=>"FSDA", "skill_ids"=>["", "1", "2", "3", "4", "5", "6"], "lead_id"=>"2", "project_id"=>"4"}, "commit"=>"Create Employee"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2, 3, 4, 5, 6)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "employees" ("name", "age", "created_at", "updated_at", "designation", "lead_id", "project_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "ABCD"], ["age", 25], ["created_at", "2017-06-21 12:37:30.371389"], ["updated_at", "2017-06-21 12:37:30.371389"], ["designation", "FSDA"], ["lead_id", 2], ["project_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 14], ["skill_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 14], ["skill_id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 14], ["skill_id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 14], ["skill_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 14], ["skill_id", 5]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "employees_skills" ("employee_id", "skill_id") VALUES (?, ?)[0m  [["employee_id", 14], ["skill_id", 6]]
+  [1m[35m (171.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/employees/14
+Completed 302 Found in 198ms (ActiveRecord: 175.0ms)
+
+
+Started GET "/employees/14" for 127.0.0.1 at 2017-06-21 18:07:30 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered employees/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 47ms (Views: 33.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-06-21 18:07:33 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lead" for 127.0.0.1 at 2017-06-21 18:07:38 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/lead"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/leads" for 127.0.0.1 at 2017-06-21 18:07:41 +0530
+Processing by LeadsController#index as HTML
+  Rendering leads/index.html.erb within layouts/application
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT "leads".* FROM "leads"[0m
+  Rendered leads/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-21 18:07:43 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  Rendered leads/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mLead Load (0.4ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."lead_id" = ? LIMIT ?[0m  [["lead_id", 2], ["LIMIT", 11]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-21 18:12:59 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.2ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  Rendered leads/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 50ms (Views: 16.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/leads/2" for 127.0.0.1 at 2017-06-21 18:13:34 +0530
+Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLead Load (0.1ms)[0m  [1m[34mSELECT  "leads".* FROM "leads" WHERE "leads"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."lead_id" = ?[0m  [["lead_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  Rendering leads/show.html.erb within layouts/application
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 13]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 14]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 9]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "employees_skills" ON "skills"."id" = "employees_skills"."skill_id" WHERE "employees_skills"."employee_id" = ?[0m  [["employee_id", 11]]
+  Rendered leads/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 19.0ms | ActiveRecord: 3.2ms)
+
+

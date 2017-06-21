@@ -35,8 +35,9 @@
 
  </p>
  <p>
-   <%= f.collection_radio_buttons :lead_id, Lead.all, :id, :lead_name do |m| %>
    <%= f.label :Team_lead%><br>
+   <%= f.collection_radio_buttons :lead_id, Lead.all, :id, :lead_name do |m| %>
+
    <%= m.radio_button %> <%= m.label %>
    <% end %>
  </p>
